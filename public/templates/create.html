@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional Theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Optional IE8 Support -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="Cryptoshortener - Making easy to remember your crypto address. Using a short text or a sequence of basic diagrams and color to represent the address of your crypto asset">    
+    <title>Cryptoshortener - Making easy to remember your crypto address</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header clearfix">
+          <nav>
+            <ul class="nav nav-pills pull-right">
+              <li role="presentation"><a href="/">Home</a></li>
+              <li role="presentation" class="active"><a href="/create">ShortURL</a></li>
+              <li role="presentation"><a href="https://etherscan.io/address/0x023fa9e2a97799b3D87B3fa35674b50B8b5c9f4E" target="_blank">Contract</a></li>
+            </ul>
+          </nav>
+          <h3 class="text-muted"> </h3>
+        </div>
+        <div>&nbsp;</div>
+        <div class="opacityLayerFormCreate"></div>
+        <div id="divForm">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h4>Instructions</h4>
+                    <p>Please inform your wallet address below and set a short alphanumeric (UTF-8) sequence to represent it.</p>
+                </div>
+                <div class="col-lg-10">
+                    <form name="frmUrl" id="frmUrl">
+                        <div>
+                            <label for="address">Wallet address: </label>
+                            <input type="text" name="address" id="address" size="50" maxlength="42" value="" required>
+                        </div>
+                        <div>
+                            <label for="url">etd.bz/</label>
+                            <input type="text" name="url" id="url" value="">
+                            <button type="button" onclick="iAmLucky()">I'm lucky</button>
+                            <button type="button" onclick="checkAvailability()">Check availability</button>
+                            <span id="availabilityStatus" class=""></span>
+                        </div>
+                        <div>&nbsp;</div>
+                        <div>
+                            <p>It costs only a Milliether. Do not forget to set this value in your MetaMask or another Ethereum wallet.</p>
+                        </div>
+                        <div class="col-lg-offset-2 col-lg-8">
+                            <button type="button" id="btnShorten" onclick="shorten()">&nbsp;&nbsp;Shorten&nbsp;&nbsp;</button>
+                            <button type="button" id="btnStartOver" onclick="startOver()">&nbsp;&nbsp;Start Over&nbsp;&nbsp;</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-10">
+                    &nbsp;
+                </div>
+                <div class="col-lg-10" id="divTrxStatus">
+                    <p id="trxStatus">&nbsp;</p>
+                </div>
+                <div class="col-lg-10">
+                    &nbsp;
+                </div>
+                <div class="col-lg-10">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+          <p>&copy; <i>SharkDAO - Minted at ETH Block 6112637</i></p>
+        </footer>
+  
+    </div>
+
+    <!-- Web3 -->
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+    <!-- ethjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ethjs@0.3.4/dist/ethjs.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Smart Contract ABI -->
+    <script src="js/abi.js"></script>
+
+    <script>
+    
+    </script>
+    </body>
+</html>
