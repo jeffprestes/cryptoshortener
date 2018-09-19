@@ -1,4 +1,4 @@
-# cryptoshortner
+# cryptoshortener
 
 https://etd.bz - Create a short address to your Ethereum Address
 
